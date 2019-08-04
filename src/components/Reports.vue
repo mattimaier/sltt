@@ -57,9 +57,10 @@ export default {
             ];
             for(var record_idx in times) {
                 var record = times[record_idx]
-                rows.push([record.start, record.end, store.getTopicById(record.topic), record.comment])
+                var topic = store.getTopicById(record.topic)
+                rows.push([record.start, record.end, topic.name, record.comment])
             }
-            let csvContent = "data:text/csv;charset=utf-8," + rows.map(e => e.join(",")).join("\n")
+            let csvContent = "data:application/csv;charset=utf-8," + rows.map(e => e.join(",")).join("\n")
 
             // ship to browser
             var encodedUri = encodeURI(csvContent);

@@ -60,7 +60,7 @@ export default {
             for(var id in totals) {
                 this.totals.push({
                     "Topic": topicNames[id],
-                    "Total [h]": Math.round(totals[id] / 1000 / 60 / 60, 2)
+                    "Total [h]": parseFloat(totals[id] / 1000 / 60 / 60).toFixed(2)
                 })
             }
         }

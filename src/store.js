@@ -43,7 +43,6 @@ export const store = {
             name: topic,
             active: true
         })
-        this.state.topics.sort(t => t.name)
         localStorage.setItem("topics", JSON.stringify(this.state.topics))
     },
     loadTopics: function() {
@@ -51,6 +50,6 @@ export const store = {
         this.state.topics = (topics == null) ? [] : topics
     },
     getTopicById: function(id) {
-        return this.state.topics.find(t => t.id = id)
+        return this.state.topics.find(t => t.id == id)
     }
 }

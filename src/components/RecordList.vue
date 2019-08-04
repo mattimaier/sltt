@@ -12,9 +12,8 @@
 
             <div slot="footer">
                 <b-button-group class="record-actions">
-                    <b-button @click="removeRecord(record)" variant="danger">Cancel</b-button>
-                    <!-- <b-button variant="warning">Hold</b-button> -->
-                    <b-button @click="saveRecord(record)" variant="success">Save</b-button>
+                    <b-button @click="removeRecord(record)" variant="secondary">Cancel</b-button>
+                    <b-button @click="saveRecord(record)" variant="danger">Stop &amp; Save</b-button>
                 </b-button-group>
             </div>
         </b-card>

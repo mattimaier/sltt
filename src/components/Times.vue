@@ -20,7 +20,7 @@
                     <small>{{duration(record)}}</small>
                 </div>
                 <div>
-                    <b-badge variant="dark">{{ record.topic | resolveTopic}}</b-badge>
+                    <b-badge variant="dark">{{record.topic | resolveTopic }}</b-badge>
                 </div>
                 <div>
                     <small>{{record.comment}}</small>
